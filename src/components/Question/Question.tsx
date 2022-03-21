@@ -79,6 +79,7 @@ export const Question: FC<IQuestion> =
                     />
                     <Button
                         text={"Ответить"}
+                        loading={true}
                         onPress={onButtonPress}
                         buttonStyleClassName={EButtonStyleClassNames.small}
                         classname={'question-range-button'}
