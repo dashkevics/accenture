@@ -1,0 +1,146 @@
+.menu
+  width: 100%
+  display: flex
+  justify-content: flex-end
+  flex-direction: row
+  position: relative
+  z-index: 2000 !important
+
+  &-user
+    display: flex
+    flex-direction: row
+    align-items: center
+
+    &-name
+      font-family: 'Graphik LCG', sans-serif
+      font-weight: 500
+      font-size: 30px
+      color: #FFFFFF
+      margin-right: 20px
+
+    &-image-wrapper
+      width: 60px
+      height: 60px
+      border-radius: 30px
+      background: #4F0078
+
+      &-photo
+        width: 60px
+        height: 60px
+        border-radius: 30px
+
+    &-burger
+      width: 80px
+      height: 59px
+      background: url("../../assets/images/menu-icon.svg")
+      margin-left: 40px
+      cursor: pointer
+
+    &-rating
+      width: 60px
+      height: 60px
+      background: url("../../assets/images/rating-icon.png")
+      background-size: cover
+      margin-left: 40px
+      cursor: pointer
+
+
+.burger-menu
+
+  &-title
+    font-family: 'Graphik LCG', sans-serif
+    font-weight: 600
+    font-size: 42px
+    text-align: center
+    color: #000000
+    margin-top: 25px
+    margin-bottom: 48px
+
+  &-links
+    display: grid
+    padding: 0 73px
+    justify-items: center
+    align-items: center
+    grid-template-columns: repeat(3, auto)
+    grid-row-gap: 26px
+    margin-bottom: 32px
+
+    &-icon
+      height: 55px
+      width: 55px
+      border-radius: 30px
+      cursor: pointer
+
+  &-text
+    font-family: 'Graphik LCG', sans-serif
+    font-weight: 600
+    font-size: 24px
+    text-align: center
+    text-decoration-line: underline
+    color: #000000
+    cursor: pointer
+    margin-top: 12px
+
+.burgerModal
+  height: 403px
+  width: 360px
+  padding: 0 !important
+  top: 112px
+  right: 60px
+  border-radius: 25px
+  float: right
+
+@media (max-width: 768px)
+  .menu
+    &-user
+      &-name
+        font-size: 14px
+        margin-right: 6px
+        height: auto
+
+      &-burger
+        width: 27.5px
+        height: 20px
+        background-size: contain
+        margin-left: 11px
+
+      &-rating
+        width: 25px
+        height: 25px
+        margin-left: 11px
+
+      &-image-wrapper
+        width: 25px
+        height: 25px
+
+        &-photo
+          width: 25px
+          height: 25px
+          border-radius: 13px
+
+  .burger-menu
+    &-title
+      font-size: 24px
+      margin-bottom: 15px
+
+    &-links
+      grid-row-gap: 14px
+      padding: 0 42px
+      align-self: center
+      margin-bottom: 22px
+
+      &-icon
+        height: 31px
+        width: 31px
+
+    &-text
+      font-size: 13px
+
+  .burgerModal
+    height: 230px
+    width: 203px
+    top: 50px
+    right: 10px
+
+
+

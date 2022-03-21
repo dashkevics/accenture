@@ -1,0 +1,129 @@
+.rating
+  padding: 50px 40px 20px 40px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  &-title
+    font-family: 'Graphik LCG', sans-serif
+    font-weight: 600
+    font-size: 60px
+    color: #4F0078
+    margin-bottom: 34px
+
+  &-text
+    font-family: 'Graphik LCG', sans-serif
+    font-style: normal
+    font-weight: 600
+    font-size: 20px
+    line-height: 20px
+
+  &-input
+    all: unset
+    width: calc(100% - 24px)
+    background: #F8F8F8
+    border: 2px solid #D6D6D6
+    border-radius: 34px
+
+    font-family: 'Graphik LCG', sans-serif
+    font-style: normal
+    font-weight: 500
+    font-size: 30px
+
+    padding: 12px
+    margin-bottom: 34px
+
+    &-icon
+      background: url("../../assets/images/search-icon.svg")
+      width: 45px
+      height: 45px
+      position: absolute
+      top: 4px
+      right: 12px
+
+    &-wrapper
+      width: 100%
+      position: relative
+
+  &-table-wrapper
+    height: 300px
+    width: 100%
+    overflow: scroll
+    overflow-x: hidden
+    margin-bottom: 47px
+
+    &::-webkit-scrollbar
+      width: 20px
+
+    &::-webkit-scrollbar-track
+      background: #F8F8F8
+      border: 2px solid #D6D6D6
+      border-radius: 34px
+      width: 50px
+
+    &::-webkit-scrollbar-thumb
+      background: url("../../assets/images/shuttle.png") no-repeat
+      background-size: 25px
+      background-position-x: center
+
+    &::-webkit-input-placeholder
+      color: rgba(27, 27, 30, 0.26)
+
+#nominations
+  width: 100%
+  border-spacing: 0 16px
+
+  & th
+    font-family: 'Graphik LCG', sans-serif
+    font-weight: 700
+    font-size: 26px
+    color: #1B1B1E
+
+  & td
+    font-family: 'Graphik LCG', sans-serif
+    font-weight: 500
+    font-size: 22px
+    color: #1B1B1E
+    height: 24px !important
+
+@media (max-width: 768px)
+  .rating
+    padding: 16px
+
+    &-table-wrapper
+      height: 400px
+      
+      &::-webkit-scrollbar
+        width: 10px
+        padding-left: 20px
+
+      &::-webkit-scrollbar-thumb
+        background-size: 12px
+
+    &-input
+      font-size: 25px
+
+    &-title
+      font-size: 33px
+
+    &-text
+      font-size: 14px
+      text-align: center
+
+  #nominations
+    border-spacing: 0 4px
+
+    & th
+      font-size: 14px
+
+    & td
+      font-size: 11px
+
+
+
+
+
+
+
+
+

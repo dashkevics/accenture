@@ -1,0 +1,85 @@
+@use '../../App' as variables
+
+@mixin buttonStyle($weight, $height, $background, $border-radius, $color )
+  width: $weight
+  height: $height
+  background: $background
+  border-radius: $border-radius
+  color: $color
+
+@mixin onHover($background-color, $color)
+  background-color: $background-color
+  color: $color
+  transition: 150ms ease-in
+  -webkit-transform: translateY(-5px)
+  transform: translateY(-5px)
+
+.button
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  position: relative
+  transition: transform 200ms
+
+  &-text
+    font-family: 'Graphik LCG', sans-serif
+    text-transform: uppercase
+
+  &-small
+    @include buttonStyle(auto, 77px, #B0B0B0, 46px, white)
+
+    &:hover
+      @include onHover(#4F0078, white)
+
+    &-text
+      @include variables.font(600, 24px, 24px)
+
+  &-medium
+    @include buttonStyle(326px, 94px, #4F0078, 46px, white)
+
+    &:hover
+      @include onHover(white, #4F0078)
+      border: 2px #4F0078 solid
+
+    &-text
+      @include variables.font(600, 36px, 36px)
+
+  &-large
+    @include buttonStyle(600px, 120px, white, 60px, #4F0078)
+
+    &:hover
+      @include onHover(white, #4F0078)
+
+    &-text
+      @include variables.font(600, 64px, 64px)
+
+  &-xLarge
+    @include buttonStyle(auto, auto, white, 60px, #4F0078)
+    padding: 28px 35px
+
+    &:hover
+      @include onHover(#4F0078, white)
+
+    &-text
+      @include variables.font(600, 64px, 64px)
+
+@media (max-width: 768px)
+  .button
+    width: auto
+    height: auto
+    &-xLarge
+      padding: 12px 24px
+      &-text
+        font-size: 26px
+        line-height: 26px
+    &-medium
+      padding: 12px 42px
+      &-text
+        font-size: 26px
+        line-height: 26px
+
+
+
+
+

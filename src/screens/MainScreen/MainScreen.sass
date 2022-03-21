@@ -1,0 +1,33 @@
+.main-screen
+  height: 100vh
+  width: 100vw
+  background: url("../../assets/images/main-screen-background.jpg") no-repeat
+  background-size: cover
+  display: flex
+  justify-content: center
+  align-items: center
+
+  &-wrapper
+    width: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    &-text
+      font-family: Graphik LCG, sans-serif
+      font-style: normal
+      font-weight: 600
+      font-size: 120px
+      color: white
+      text-transform: uppercase
+      margin-bottom: 26px
+
+@media (max-width: 768px)
+  .main-screen
+    &-wrapper
+      &-text
+        font-size: 40px
+
+
+

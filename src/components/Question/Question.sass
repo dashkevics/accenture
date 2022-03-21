@@ -1,0 +1,103 @@
+.question
+  padding: 20px 120px
+
+  &-text
+    font-family: 'Graphik LCG', sans-serif
+    font-weight: 500
+    font-size: 28px
+    color: #1B1B1E
+    margin-bottom: 50px
+
+  &-number
+    font-family: 'Graphik LCG', sans-serif
+    font-weight: 700
+    font-size: 48px
+    color: #4F0078
+    margin-bottom: 23px
+
+  &-answers
+    margin-bottom: 53px
+
+    & > div:not(:last-child)
+      margin-bottom: 20px
+
+  &-range
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+    padding-left: 32.5px
+    outline: none
+
+    &-track
+      height: 11px
+      width: calc(100% - 200px)
+      background-color: #4F0078
+
+    &-mark
+      height: 65px
+      width: 65px
+      border-radius: 33px
+      background-color: #4F0078
+
+      display: flex
+      justify-content: center
+      align-items: center
+
+      &-number
+        font-family: 'Graphik LCG', sans-serif
+        font-weight: 700
+        font-size: 48px
+        text-align: center
+        color: #FFFFFF
+
+    &-button
+      margin-left: 86px
+      padding: 0 70px
+
+    &-thumb
+      height: 90px
+      width: 90px
+      background: url("../../assets/images/shuttle-icon-range.svg") center center no-repeat
+
+      &:focus
+        outline: none
+
+@media (max-width: 768px)
+  .question
+    padding: 20px 20px 20px 30px
+
+    &-text
+      font-size: 20px
+      margin-bottom: 25px
+
+    &-number
+      font-size: 24px
+
+    &-range
+      padding-left: 18px
+      justify-content: space-between
+      align-items: flex-end
+
+      &-track
+        height: 260px
+        width: 5px
+        background-color: #4F0078
+
+      &-mark
+        height: 45px
+        width: 45px
+
+        &-number
+          font-size: 30px
+
+      &-thumb
+        background: url("../../assets/images/shuttle-up.png")
+        background-size: cover
+        height: 48px
+        width: 48px
+
+      &-button
+        margin-left: unset
+        padding: 18px 40px
+

@@ -1,0 +1,32 @@
+.start-screen
+  height: 100vh
+  width: 100vw
+  background: url("../../assets/images/main-screen-background.jpg") no-repeat center
+  background-size: cover
+  padding-left: 80px
+
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  &-buttons-wrapper
+    max-width: 600px
+
+    &-margin
+      margin-bottom: 68px
+
+
+@media (max-width: 768px)
+  .start-screen
+    padding-left: 0
+
+    &-buttons-wrapper
+      width: 100%
+      height: auto
+      max-width: 275px
+      align-self: center
+
+      &-margin
+        margin-bottom: 15px
+
+
