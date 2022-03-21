@@ -6,7 +6,6 @@ import {Question} from "../../components/Question/Question";
 import {Rating} from "../../components/Rating/Rating";
 import 'react-responsive-modal/styles.css';
 import {Modal} from 'react-responsive-modal';
-import {Stopwatch} from "../../components/Stopwatch/Stopwatch";
 
 export const GameScreen: FC<{}> = () => {
     const [isRulesActive, setRulesActive] = useState<boolean>(true);
@@ -70,7 +69,6 @@ export const GameScreen: FC<{}> = () => {
                       onRatingClick={() => setRatingActive(!isRatingActive)}
                 />
             </div>
-            <Stopwatch/>
             <div className={"game-screen-svg"}>
                 <StartSVG onAnimationEnd={(i) => {setQuestionActive(true); setCurrentQuestionNumber(i)}} />
             </div>
