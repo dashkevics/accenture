@@ -26,6 +26,9 @@
     font-family: 'Graphik LCG', sans-serif
     text-transform: uppercase
 
+  &-loader
+    transform: scale(0.4, 0.4)
+
   &-small
     @include buttonStyle(auto, 77px, #B0B0B0, 46px, white)
 
@@ -64,6 +67,8 @@
     &-text
       @include variables.font(600, 64px, 64px)
 
+//MEDIA QUERIES
+
 @media (max-width: 768px)
   .button
     width: auto
@@ -78,8 +83,5 @@
       &-text
         font-size: 26px
         line-height: 26px
-
-
-
 
 
