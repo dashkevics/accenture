@@ -6,6 +6,7 @@ import {Question} from "../../components/Question/Question";
 import {Rating} from "../../components/Rating/Rating";
 import 'react-responsive-modal/styles.css';
 import {Modal} from 'react-responsive-modal';
+import {Final} from "../../components/Final/Final";
 
 export const GameScreen: FC<{}> = () => {
     const [isRulesActive, setRulesActive] = useState<boolean>(true);
@@ -58,8 +59,6 @@ export const GameScreen: FC<{}> = () => {
 
     const answersArray = data.map(item => item.answers);
 
-    const totalQuestionsNumber = data.length;
-
     return (
         <div className={"game-screen"}>
             <div className={"game-screen-menu"}>
@@ -101,13 +100,11 @@ export const GameScreen: FC<{}> = () => {
                 }} center
             >
                 <Question
-                    answerNumber={1}
                     answersArray={answersArray}
                     onButtonPress={goToNextQuestion}
-                    currentQuestionNumber={currentQuestionNumber}
-                    totalQuestionsNumber={totalQuestionsNumber}
                     questionText={"Это вопрос, длинный очень длинный вопрос, очень и очень длинный вопрос, очень и очень длинный вопрос?"}
                 />
+                {/*<Final/>*/}
             </Modal>
             <Modal open={isRatingActive}
                    center
