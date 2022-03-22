@@ -1,9 +1,19 @@
-import "./StartScreen.sass"
-import React from "react";
-import {Button, EButtonStyleClassNames} from "../../components/Button/Button";
+import React, {useEffect} from 'react';
 import {Link} from "react-router-dom";
+import {Button, EButtonStyleClassNames} from "../../components/Button/Button";
+
+import "./StartScreen.sass"
 
 export const StartScreen = () => {
+
+    useEffect(() => {
+        let tkn = retrieveToken();
+        if (tkn) window.localStorage.setItem('accenture_tkn', tkn);
+        else window.location.pathname = '/';
+    })
+
+    const retrieveToken = () => new URLSearchParams(window.location.search).get('token');
+
     return (
         <div className={"start-screen"}>
             <div className={"start-screen-buttons-wrapper"}>
