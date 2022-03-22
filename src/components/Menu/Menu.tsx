@@ -60,6 +60,7 @@ export const Menu: FC<IMenu> = (
                 <div className={"burger-menu-text"}
                      onClick={() => window.open('https://codenrock.com')}>Codenrock.com
                 </div>
+                <div className={"burger-menu-rating burger-menu-text"} onClick={onRatingClick}>Лидерборд</div>
             </div>
         )
     }
