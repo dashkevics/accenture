@@ -1,4 +1,4 @@
-import React, {FC, useState} from "react";
+import React, {FC} from "react";
 import {Direction, Range} from 'react-range';
 import "./Question.sass";
 import {EAnswerNumberState} from "../AnswerNumber/AnswerNumber";
@@ -6,45 +6,40 @@ import {Answer} from "../Answer/Answer";
 import {Button, EButtonStyleClassNames} from "../Button/Button";
 
 interface IQuestion {
-    answerNumber: number;
-    answerNumberState?: EAnswerNumberState;
     questionText?: string;
-    answersArray: any;
-    currentQuestionNumber?: number;
-    totalQuestionsNumber?: number;
+    answersArray: {}[];
+    currentQuestion?: string;
     onButtonPress?: () => void;
 }
 
 export const Question: FC<IQuestion> =
     ({
-         answerNumber,
-         answerNumberState,
          answersArray,
          onButtonPress,
          questionText,
-         currentQuestionNumber,
-         totalQuestionsNumber,
+         currentQuestion,
      }) => {
 
         //data api
-
-        const [userAnswers, setUserAnswer] = useState([4]);
 
         const tabletMediaQuery = window.innerWidth > 768;
 
         return (
             <div className={"question"}>
                 <div
-                    className={"question-number"}>{currentQuestionNumber + "/" + totalQuestionsNumber}</div>
+                    className={"question-number"}>{currentQuestion}</div>
                 <div className={"question-text"}>{questionText}</div>
                 <div className={"question-answers"}>
-                    {answersArray.map((answer: string, i: number) =>
-                        <Answer
-                            key={i}
-                            number={answerNumber}
-                            state={EAnswerNumberState.regular}
-                            text={answer.length.toString()}
-                        />
+                    {answersArray.map((answer , index: number, array) => {
+                        return (
+                            <Answer
+                                key={index}
+                                number={1}
+                                state={EAnswerNumberState.regular}
+                                text={"Hey"}
+                            />
+                        )
+                        }
                     )}
                 </div>
                 <div className={"question-range"}>
@@ -53,8 +48,8 @@ export const Question: FC<IQuestion> =
                         step={1}
                         min={1}
                         max={4}
-                        values={userAnswers}
-                        onChange={(values) => setUserAnswer(values)}
+                        values={[4]}
+                        onChange={() => {}}
                         renderTrack={({props, children}) => (
                             <div
                                 {...props}
@@ -79,7 +74,7 @@ export const Question: FC<IQuestion> =
                     />
                     <Button
                         text={"Ответить"}
-                        loading={true}
+                        loading={false}
                         onPress={onButtonPress}
                         buttonStyleClassName={EButtonStyleClassNames.small}
                         classname={'question-range-button'}
