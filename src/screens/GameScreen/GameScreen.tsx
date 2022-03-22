@@ -9,7 +9,7 @@ import {Modal} from 'react-responsive-modal';
 import {Final} from "../../components/Final/Final";
 
 export const GameScreen: FC<{}> = () => {
-    const [isRulesActive, setRulesActive] = useState<boolean>(true);
+    const [isRulesActive, setRulesActive] = useState<boolean>(false);
     const [isQuestionActive, setQuestionActive] = useState<boolean>(false);
     const [isRatingActive, setRatingActive] = useState<boolean>(false);
     const [currentQuestionNumber, setCurrentQuestionNumber] = useState<number>(1);
