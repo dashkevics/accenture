@@ -14,7 +14,10 @@ export const MainScreen = () => {
                         text={"Выиграть приз"}
                     />
                 </Link>
+                <div className={'main-screen-background-image-first'}/>
+                <div className={'main-screen-background-image-second'}/>
             </div>
+            <div className={'main-screen-background-image-third'}/>
         </div>
     );
 }

@@ -7,12 +7,41 @@
   justify-content: center
   align-items: center
 
+  &-background-image
+    &-first
+      height: 491px
+      width: 491px
+      background: url("../../assets/images/background-shuttle-1.png") center center no-repeat
+      background-size: cover
+      position: absolute
+      left: -180px
+
+    &-second
+      height: 491px
+      width: 491px
+      background: url("../../assets/images/background-shuttle-1.png") center center no-repeat
+      background-size: cover
+      position: absolute
+      top: -170px
+      right: -240px
+      transform: rotate(90deg)
+
+    &-third
+      height: 936px
+      width: 864px
+      right: 130px
+      background: url("../../assets/images/background-shuttle-2.png") center center no-repeat
+      background-size: cover
+      position: absolute
+      z-index: 0
+
   &-wrapper
     width: auto
     display: flex
     flex-direction: column
     align-items: center
     justify-content: center
+    z-index: 1
 
     &-text
       font-family: Graphik LCG, sans-serif
