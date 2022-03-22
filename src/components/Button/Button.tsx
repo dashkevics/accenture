@@ -32,8 +32,8 @@ export const Button: FC<IButton> = (
 ) => {
 
     return (
-        <div className={classNames('button', buttonStyleClassName, classname)}
-             onClick={onPress} style={style}>
+        <div className={classNames('button', buttonStyleClassName, classname, loading && "button-medium-loading")}
+             onClick={onPress} style={style} >
             {loading ? <Loader/> : <span
                 className={classNames("button-text", `${buttonStyleClassName}-text`)}>{text}</span>}
             {children}

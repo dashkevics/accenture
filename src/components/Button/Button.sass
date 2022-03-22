@@ -26,9 +26,6 @@
     font-family: 'Graphik LCG', sans-serif
     text-transform: uppercase
 
-  &-loader
-    transform: scale(0.4, 0.4)
-
   &-small
     @include buttonStyle(auto, 77px, #B0B0B0, 46px, white)
 
@@ -80,8 +77,13 @@
         line-height: 26px
     &-medium
       padding: 12px 42px
+      &-loading
+        height: 50px
+        padding: 0 62px !important
       &-text
-        font-size: 26px
-        line-height: 26px
+        font-size: 24px
+        line-height: 24px
+        text-align: center
+
 
 
