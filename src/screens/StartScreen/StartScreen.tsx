@@ -19,6 +19,8 @@ export const StartScreen = () => {
                     text={"Рейтинг"}
                 />
             </div>
+            <div className={'start-screen-background-image-second'}/>
+            <div className={'start-screen-background-image-third'}/>
         </div>
     )
 }

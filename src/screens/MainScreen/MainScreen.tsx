@@ -8,15 +8,16 @@ export const MainScreen = () => {
         <div className={"main-screen"}>
             <div className={"main-screen-wrapper"}>
                 <div className={"main-screen-wrapper-text"}>Созвездие</div>
-                <Link to={"/start"} style={{textDecoration: "none", width: "100%"}}>
+                <Link to={"/start"}
+                      style={{textDecoration: "none", width: "100%"}}>
                     <Button
                         buttonStyleClassName={EButtonStyleClassNames.xLarge}
                         text={"Выиграть приз"}
                     />
                 </Link>
-                <div className={'main-screen-background-image-first'}/>
-                <div className={'main-screen-background-image-second'}/>
             </div>
+            <div className={'main-screen-background-image-first'}/>
+            <div className={'main-screen-background-image-second'}/>
             <div className={'main-screen-background-image-third'}/>
         </div>
     );
