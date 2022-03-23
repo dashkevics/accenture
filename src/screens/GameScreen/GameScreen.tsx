@@ -10,6 +10,7 @@ import {Final} from '../../components/Final/Final';
 import {checkIfJoinedTheContestAndJoinIfNot, fetchTaskByNominationAndTaskId, fetchTasksByNominationId, getNominationIdByIndex} from '../../API';
 
 
+
 export const GameScreen: FC = () => {
 
     const [loading, setLoading] = useState(true);
@@ -166,6 +167,32 @@ const StartSVG: React.FC<{ onAnimationEnd: (i: number) => void }> = (props) => {
             return acc;
         }, []);
 
+    // function ShuttleRotateNumber() {
+    //     let result;
+    //     if (index < 3) {
+    //         result = "105deg"
+    //     }
+    //     if (index === 3) {
+    //         result = "180deg"
+    //     }
+    //     if (index >= 4) {
+    //         result = "-110deg"
+    //     }
+    //     if (index === 7) {
+    //         result = "0deg"
+    //     }
+    //     if (index >= 8) {
+    //         result = "75deg"
+    //     }
+    //     if (index === 11) {
+    //         result = "-75deg"
+    //     }
+    //     if (index >= 11) {
+    //         result = "-75deg"
+    //     }
+    //
+    //     return result
+    // }
 
     return <svg
         id="main"
@@ -245,13 +272,12 @@ const StartSVG: React.FC<{ onAnimationEnd: (i: number) => void }> = (props) => {
             style={{transformBox: 'fill-box', transformOrigin: 'center'}}
 
         >
-
         </rect>
 
         <defs>
             <pattern id="pattern0"
                      patternContentUnits="objectBoundingBox"
-                     width="1" height="1" rotate="auto">
+                     width="1" height="1" rotate="auto" >
                 <use xlinkHref="#image0_39_4"
                      transform="scale(0.00195312)"/>
             </pattern>

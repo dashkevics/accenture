@@ -8,9 +8,32 @@
   display: flex
   flex-direction: column
   justify-content: center
+  position: relative
+  overflow: hidden
+
+  &-background-image
+    &-second
+      height: 491px
+      width: 491px
+      background: url("../../assets/images/background-shuttle-1.png") center center no-repeat
+      background-size: cover
+      position: absolute
+      left: -180px
+
+    &-third
+      height: 80%
+      width: 700px
+      right: 0
+      top: auto
+      bottom: auto
+      background: url("../../assets/images/background-shuttle-3.png") no-repeat
+      background-size: contain
+      position: absolute
+      z-index: 0
 
   &-buttons-wrapper
     max-width: 600px
+    z-index: 1
 
     &-margin
       margin-bottom: 68px
@@ -19,6 +42,23 @@
 @media (max-width: 768px)
   .start-screen
     padding-left: 0
+    background-position-x: 70%
+    align-items: center
+
+    &-background-image
+      &-second
+        height: 140px
+        width: 140px
+        bottom: -50px
+        right: -50px
+        left: unset
+        transform: rotate(160deg)
+
+      &-third
+        height: 415px
+        width: 90%
+        right: auto
+        left: auto
 
     &-buttons-wrapper
       width: 100%

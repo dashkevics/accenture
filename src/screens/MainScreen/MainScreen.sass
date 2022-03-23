@@ -6,11 +6,13 @@
   display: flex
   justify-content: center
   align-items: center
+  position: relative
+  overflow: hidden
 
   &-background-image
     &-first
-      height: 491px
-      width: 491px
+      height: 400px
+      width: 400px
       background: url("../../assets/images/background-shuttle-1.png") center center no-repeat
       background-size: cover
       position: absolute
@@ -27,11 +29,13 @@
       transform: rotate(90deg)
 
     &-third
-      height: 936px
-      width: 864px
+      height: 80%
+      width: 700px
       right: 130px
-      background: url("../../assets/images/background-shuttle-2.png") center center no-repeat
-      background-size: cover
+      top: auto
+      bottom: auto
+      background: url("../../assets/images/background-shuttle-2.png") no-repeat
+      background-size: contain
       position: absolute
       z-index: 0
 
@@ -54,6 +58,27 @@
 
 @media (max-width: 768px)
   .main-screen
+    background-position-x: 70%
+    &-background-image
+      &-first
+        height: 181px
+        width: 181px
+        top: -100px
+        left: -60px
+
+      &-second
+        height: 300px
+        width: 300px
+        top: unset
+        bottom: -100px
+        right: -120px
+
+      &-third
+        height: 415px
+        width: 90%
+        right: auto
+        left: auto
+
     &-wrapper
       &-text
         font-size: 40px

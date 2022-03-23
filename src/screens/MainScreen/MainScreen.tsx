@@ -12,9 +12,9 @@ export const MainScreen = () => {
                         buttonStyleClassName={EButtonStyleClassNames.xLarge}
                         text={"Выиграть приз"}
                     />
-                <div className={'main-screen-background-image-first'}/>
-                <div className={'main-screen-background-image-second'}/>
             </div>
+            <div className={'main-screen-background-image-first'}/>
+            <div className={'main-screen-background-image-second'}/>
             <div className={'main-screen-background-image-third'}/>
         </div>
     );
