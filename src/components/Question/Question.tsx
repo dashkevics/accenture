@@ -7,7 +7,7 @@ import {Button, EButtonStyleClassNames} from "../Button/Button";
 
 interface IQuestion {
     questionText?: string;
-    answersArray: {}[];
+    answersArray: string[];
     currentQuestion?: string;
     onButtonPress?: () => void;
 }
@@ -34,9 +34,9 @@ export const Question: FC<IQuestion> =
                         return (
                             <Answer
                                 key={index}
-                                number={1}
+                                number={index + 1}
                                 state={EAnswerNumberState.regular}
-                                text={"Hey"}
+                                text={answer}
                             />
                         )
                         }
