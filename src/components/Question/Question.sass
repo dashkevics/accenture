@@ -1,12 +1,17 @@
 .question
   padding: 20px 120px
+  min-width: 800px
 
   &-text
     font-family: 'Graphik LCG', sans-serif
     font-weight: 500
-    font-size: 28px
+    font-size: 24px
     color: #1B1B1E
     margin-bottom: 50px
+
+    &-description
+      margin-bottom: 20px
+      font-size: 28px
 
   &-number
     font-family: 'Graphik LCG', sans-serif
@@ -66,6 +71,7 @@
 @media (max-width: 768px)
   .question
     padding: 20px 20px 20px 30px
+    min-width: unset
 
     &-text
       font-size: 20px
@@ -98,6 +104,6 @@
         width: 48px
 
       &-button
-        margin-left: unset
+        margin-left: 30px
         padding: 13px 40px
 
