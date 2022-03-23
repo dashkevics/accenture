@@ -11,7 +11,7 @@ export const enum EAnswerNumberState {
 export const AnswerNumber:FC<{number: number, state: EAnswerNumberState}> = ({number, state}) => {
     return(
         <div className={classNames('answer-number', state)}>
-            <div className={"answer-number-text"}>{number}</div>
+            <span className={"answer-number-text"}>{number}</span>
         </div>
     )
 }
